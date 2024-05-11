@@ -1,0 +1,16 @@
+package com.example.lobby.navigation
+
+const val HOME_URL = "home"
+const val LOGIN_URL = "login"
+const val UPLOAD_URL = "upload"
+const val VIEW_UPLOAD_URL = "view_upload"
+const val DASHBOARD_URL = "dashboard"
+const val CALCULATOR_URL = "calculator"
+const val FORM_URL = "form"
+const val SPLASH_URL = "splash"
+const val SUMMARY_URL = "summary"
+const val ACCOUNT_URL = "account"
+const val HISTORY_URL= "history"
+const val SUPPORT_URL = "support"
+const val SETTINGS_URL = "settings"
+const val SIGNUP_URL = "signup"

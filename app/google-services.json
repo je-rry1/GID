@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "538575004334",
+    "project_id": "lobby-63694",
+    "storage_bucket": "lobby-63694.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538575004334:android:154e599d389f15d17b433f",
+        "android_client_info": {
+          "package_name": "com.example.lobby"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxnS8_4yWRtgoUq1l6PdaW_MllGxM2CoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
