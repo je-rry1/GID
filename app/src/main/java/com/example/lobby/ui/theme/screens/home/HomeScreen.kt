@@ -182,8 +182,11 @@ fun HomeScreen(navController:NavHostController) {
                                     .size(50.dp)
                                     .padding(top = 8.dp, start = 4.dp)
                                     .clickable {
-                                        val simToolKitLaunchIntent =
-                                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                        val simToolKitLaunchIntent = mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                        simToolKitLaunchIntent?.apply {
+                                            action = "com.safaricom.intent.action.MPESA_TOOLKIT"
+                                            putExtra("action", "mshwari") // Assuming this is the correct key for M-Shwari
+                                        }
                                         simToolKitLaunchIntent?.let { mContext.startActivity(it) }
                                     },
                                     contentAlignment = Alignment.Center)
@@ -212,8 +215,11 @@ fun HomeScreen(navController:NavHostController) {
                                 //Box
                                 Box (modifier = Modifier.size(50.dp)
                                     .clickable {
-                                        val simToolKitLaunchIntent =
-                                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                        val simToolKitLaunchIntent = mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                        simToolKitLaunchIntent?.apply {
+                                            action = "com.safaricom.intent.action.MPESA_TOOLKIT"
+                                            putExtra("action", "send_money") // Assuming this is the correct key for sending money
+                                        }
                                         simToolKitLaunchIntent?.let { mContext.startActivity(it) }
                                     }
                                     , contentAlignment = Alignment.Center){
@@ -253,8 +259,11 @@ fun HomeScreen(navController:NavHostController) {
                                             .size(50.dp)
                                             .padding(top = 8.dp, start = 4.dp)
                                             .clickable {
-                                                val simToolKitLaunchIntent =
-                                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                                val simToolKitLaunchIntent = mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                                simToolKitLaunchIntent?.apply {
+                                                    action = "com.safaricom.intent.action.MPESA_TOOLKIT"
+                                                    putExtra("action", "buy_airtime") // Assuming this is the correct key for Buy Airtime
+                                                }
                                                 simToolKitLaunchIntent?.let { mContext.startActivity(it) }
 
                                                 Toast
@@ -285,8 +294,11 @@ fun HomeScreen(navController:NavHostController) {
                                 //Box
                                 Box (modifier = Modifier.size(50.dp)
                                     .clickable {
-                                        val simToolKitLaunchIntent =
-                                            mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                        val simToolKitLaunchIntent = mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                        simToolKitLaunchIntent?.apply {
+                                            action = "com.safaricom.intent.action.MPESA_TOOLKIT"
+                                            putExtra("action", "paybill") // Assuming this is the correct key for Paybill
+                                        }
                                         simToolKitLaunchIntent?.let { mContext.startActivity(it) }
                                     }
                                     , contentAlignment = Alignment.Center){
@@ -329,8 +341,11 @@ fun HomeScreen(navController:NavHostController) {
                                             .size(50.dp)
                                             .padding(top = 8.dp, start = 4.dp)
                                             .clickable {
-                                                val simToolKitLaunchIntent =
-                                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                                val simToolKitLaunchIntent = mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                                simToolKitLaunchIntent?.apply {
+                                                    action = "com.safaricom.intent.action.MPESA_TOOLKIT"
+                                                    putExtra("action", "buy_goods") // Assuming this is the correct key for Buy Goods
+                                                }
                                                 simToolKitLaunchIntent?.let { mContext.startActivity(it) }
                                             }
                                     )
@@ -359,8 +374,11 @@ fun HomeScreen(navController:NavHostController) {
                                             .size(50.dp)
                                             .padding(top = 8.dp, start = 4.dp)
                                             .clickable {
-                                                val simToolKitLaunchIntent =
-                                                    mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                                val simToolKitLaunchIntent = mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                                simToolKitLaunchIntent?.apply {
+                                                    action = "com.safaricom.intent.action.MPESA_TOOLKIT"
+                                                    putExtra("action", "pochi_la_biashara") // Assuming this is the correct key for Pochi La Biashara
+                                                }
                                                 simToolKitLaunchIntent?.let { mContext.startActivity(it) }
                                             }
                                     )

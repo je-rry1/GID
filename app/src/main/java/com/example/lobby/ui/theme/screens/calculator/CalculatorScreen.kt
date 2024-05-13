@@ -33,7 +33,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.lobby.R
 import com.example.lobby.data.AuthViewModel
-import com.example.lobby.navigation.SUMMARY_URL
 import com.example.lobby.navigation.UPLOAD_URL
 import com.example.lobby.ui.theme.beige
 import com.example.lobby.ui.theme.sign
