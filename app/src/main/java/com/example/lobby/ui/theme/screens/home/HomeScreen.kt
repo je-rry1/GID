@@ -155,7 +155,7 @@ fun HomeScreen(navController:NavHostController) {
                     .padding(start = 50.dp, top = 30.dp)){
                     //Column
                     Column (
-                        Modifier.padding(top = 30.dp)
+                        Modifier.padding(top = 50.dp)
                     ){
                         androidx.compose.material3.Text(text = "GID", fontSize = 35.sp, fontWeight = FontWeight.ExtraBold, fontFamily = FontFamily.Cursive)
                         androidx.compose.material3.Text(text = "Save money through GID", fontSize = 15.sp)
