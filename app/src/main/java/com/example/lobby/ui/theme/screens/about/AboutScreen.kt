@@ -34,24 +34,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.lobby.navigation.UPLOAD_URL
+import com.example.lobby.screens.home.HomeScreen
 import com.example.lobby.ui.theme.Purple500
 import com.example.lobby.ui.theme.beige
 import com.example.lobby.ui.theme.blue
 
-class HomeActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            Aboutus()
-
-        }
-    }
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Aboutus(){
+fun Aboutus(navController: NavHostController){
     val mContext = LocalContext.current
 
     Column(modifier = Modifier.fillMaxSize()
@@ -115,6 +108,7 @@ fun Aboutus(){
 }
 @Preview(showBackground = true)
 @Composable
-fun AboutusPreview(){
-    Aboutus()
+fun AboutusScreenPreview() {
+    Aboutus(rememberNavController())
+
 }

@@ -43,10 +43,11 @@ fun DashboardScreen(navController: NavHostController) {
     val mContext= LocalContext.current
     Row (
         Modifier.horizontalScroll(rememberScrollState())
+            .background(beige)
     ){
         //Column1
         Card(modifier= Modifier
-            .fillMaxSize()
+            .height(500.dp)
             .background(beige))
         {
             Spacer(modifier = Modifier.height(30.dp))
@@ -88,7 +89,7 @@ fun DashboardScreen(navController: NavHostController) {
         //End of column1
         //Column2
         Card(modifier= Modifier
-            .fillMaxSize()
+            .height(500.dp)
             .background(beige))
         {
             Spacer(modifier = Modifier.height(30.dp))
@@ -131,7 +132,11 @@ fun DashboardScreen(navController: NavHostController) {
 
         //End of column2
         //Last
-        Card {
+        Card (
+            modifier= Modifier
+                .height(500.dp)
+                .background(beige)
+        ){
             Box(modifier = Modifier
                 .fillMaxWidth()
                 .height(500.dp)

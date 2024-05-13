@@ -8,8 +8,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.firebasestorage.screens.about.DashboardScreen
 import com.example.firebasestorage.screens.contact.SupportScreen
-import com.example.firebasestorage.screens.products.UploadScreen
 import com.example.lobby.screens.home.HomeScreen
+import com.example.lobby.screens.products.UploadScreen
+import com.example.lobby.ui.theme.screens.about.Aboutus
 import com.example.lobby.ui.theme.screens.account.AccountScreen
 import com.example.lobby.ui.theme.screens.calculator.CalculatorScreen
 import com.example.lobby.ui.theme.screens.form.FormScreen
@@ -24,6 +25,9 @@ fun AppNavHost(modifier: Modifier = Modifier, navController: NavHostController =
     NavHost(navController = navController, modifier=modifier, startDestination = startDestination){
         composable(HOME_URL){
             HomeScreen(navController)
+        }
+        composable(ABOUT_URL){
+            Aboutus(navController)
         }
 
         composable(LOGIN_URL){

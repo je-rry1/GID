@@ -150,7 +150,7 @@ fun FormScreen(navController: NavHostController) {
         Button(onClick = {
             navController.navigate(DASHBOARD_URL)
         }) {
-            Text(text = "Login")
+            Text(text = "Continue")
         }
 
     }

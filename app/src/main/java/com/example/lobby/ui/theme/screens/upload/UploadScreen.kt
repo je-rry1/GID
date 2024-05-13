@@ -118,7 +118,7 @@ fun UploadScreen(navController:NavHostController){
         OutlinedTextField(
             value = userName,
             onValueChange = { userName = it },
-            label = { Text(text = "Full  Name ") },
+            label = { Text(text = "UserName ") },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
         )
 

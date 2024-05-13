@@ -5,6 +5,7 @@ import android.content.Intent
 import android.provider.Settings
 import android.widget.Toast
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -72,7 +73,7 @@ fun HomeScreen(navController:NavHostController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .verticalScroll(rememberScrollState()),
+            .background(beige),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         var mContext = LocalContext.current
@@ -153,7 +154,9 @@ fun HomeScreen(navController:NavHostController) {
 
                     .padding(start = 50.dp, top = 30.dp)){
                     //Column
-                    Column {
+                    Column (
+                        Modifier.padding(top = 30.dp)
+                    ){
                         androidx.compose.material3.Text(text = "GID", fontSize = 35.sp, fontWeight = FontWeight.ExtraBold, fontFamily = FontFamily.Cursive)
                         androidx.compose.material3.Text(text = "Save money through GID", fontSize = 15.sp)
                     }
@@ -393,7 +396,7 @@ val bottomNavItems = listOf(
 
     BottomNavItem(
         title = "contact",
-        route="login",
+        route="support",
         selectedIcon=Icons.Filled.Person,
         unselectedIcon=Icons.Outlined.Person,
         hasNews = false,
@@ -402,7 +405,7 @@ val bottomNavItems = listOf(
 
     BottomNavItem(
         title = "about",
-        route="upload",
+        route="about",
         selectedIcon=Icons.Filled.Face,
         unselectedIcon=Icons.Outlined.Face,
         hasNews = false,
