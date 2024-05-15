@@ -131,7 +131,8 @@ fun SignupScreen(navController:NavHostController){
                 .background(white),
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Password
-            )
+            ),
+            visualTransformation = PasswordVisualTransformation()
         )
 
         Spacer(modifier = Modifier.height(30.dp))
