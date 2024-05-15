@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -41,136 +42,61 @@ import com.example.lobby.ui.theme.beige
 fun DashboardScreen(navController: NavHostController) {
 
     val mContext= LocalContext.current
-    Row (
-        Modifier.horizontalScroll(rememberScrollState())
+    Column(
+        Modifier
+            .fillMaxSize()
             .background(beige)
-    ){
-        //Column1
-        Card(modifier= Modifier
-            .height(500.dp)
-            .background(beige))
-        {
-            Spacer(modifier = Modifier.height(30.dp))
-
-            Box(modifier = Modifier
-                .fillMaxWidth()
-                .height(500.dp)
-                , contentAlignment = Alignment.Center) {
-                Image(painter = painterResource(id = R.drawable.app2),
-                    contentDescription ="Canada",
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop)
-
-            }
-
-            Spacer(modifier = Modifier.height(10.dp))
-
-
-            Text(text = "Wallet",
-                color = Color.Black,
-                modifier = Modifier.fillMaxWidth(),
-                textAlign = TextAlign.Center,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.ExtraBold)
-
-            Spacer(modifier = Modifier.height(15.dp))
-
-
-            Text(text = "Transfer, paybills and buy goods using GID",
-                modifier = Modifier.fillMaxWidth(),
-                textAlign = TextAlign.Center,
-                fontSize = 20.sp)
-
-            Spacer(modifier = Modifier.height(20.dp))
-
-
+    )
+    {
+        Box(modifier = Modifier
+            .width(300.dp)
+            .height(400.dp)
+            , contentAlignment = Alignment.Center) {
+            Image(painter = painterResource(id = R.drawable.app1),
+                contentDescription ="Canada",
+                modifier = Modifier.padding(start = 70.dp),
+                contentScale = ContentScale.Crop)
 
         }
+        Spacer(modifier = Modifier.height(10.dp))
+
+        Text(text = "Save money using GID",
+            color = Color.Black,
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center,
+            fontSize = 20.sp)
+
+        Spacer(modifier = Modifier.height(15.dp))
+
+
+        Text(text = "Transfer, paybills and buy goods using GID",
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center,
+            fontSize = 20.sp)
         //End of column1
-        //Column2
-        Card(modifier= Modifier
-            .height(500.dp)
-            .background(beige))
-        {
-            Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
-            Box(modifier = Modifier
+        Button(onClick = {
+
+            navController.navigate(HOME_URL)
+            Toast.makeText(mContext, "wallet", Toast.LENGTH_LONG)
+                .show()
+        },
+            modifier = Modifier
                 .fillMaxWidth()
-                .height(500.dp)
-                , contentAlignment = Alignment.Center) {
-                Image(painter = painterResource(id = R.drawable.app1),
-                    contentDescription ="Canada",
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop)
-
-            }
-
-            Spacer(modifier = Modifier.height(10.dp))
-
-
-            Text(text = "Wallet",
-                color = Color.Black,
-                modifier = Modifier.fillMaxWidth(),
-                textAlign = TextAlign.Center,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.ExtraBold)
-
-            Spacer(modifier = Modifier.height(15.dp))
-
-
-            Text(text = "Save money using GID",
-                modifier = Modifier.fillMaxWidth(),
-                textAlign = TextAlign.Center,
-                fontSize = 20.sp)
-
-            Spacer(modifier = Modifier.height(20.dp))
-
-
-
+                .padding(start = 10.dp, end = 10.dp),
+            colors = ButtonDefaults.buttonColors(Purple500),
+            shape = RoundedCornerShape(5.dp)
+        ) {
+            Text(text = "View Wallet")
 
         }
 
-        //End of column2
-        //Last
-        Card (
-            modifier= Modifier
-                .height(500.dp)
-                .background(beige)
-        ){
-            Box(modifier = Modifier
-                .fillMaxWidth()
-                .height(500.dp)
-                , contentAlignment = Alignment.Center) {
-                Image(painter = painterResource(id = R.drawable.app1),
-                    contentDescription ="Canada",
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop)
-
-            }
-
-            Button(onClick = {
-
-                navController.navigate(HOME_URL)
-                Toast.makeText(mContext, "wallet", Toast.LENGTH_LONG)
-                    .show()
-            },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 10.dp, end = 10.dp),
-                colors = ButtonDefaults.buttonColors(Purple500),
-                shape = RoundedCornerShape(5.dp)
-            ) {
-                Text(text = "View Wallet")
-
-            }
         }
 
 
     }
 
-
-
-}
 
 @Preview(showBackground = true)
 @Composable

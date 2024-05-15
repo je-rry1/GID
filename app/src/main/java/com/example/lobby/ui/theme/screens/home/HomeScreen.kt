@@ -63,6 +63,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.lobby.LocationActivity
 import com.example.lobby.R
+import com.example.lobby.navigation.ABOUT_URL
+import com.example.lobby.navigation.HOME_URL
+import com.example.lobby.navigation.SUPPORT_URL
 import com.example.lobby.ui.theme.beige
 
 data class Screen(val title: String, val icon: Int)
@@ -90,7 +93,7 @@ fun HomeScreen(navController:NavHostController) {
                             selected = index == selected,
                             onClick = {
                                 selected = index
-                                // navController.navigate(HOME_URL)
+                                navController.navigate(bottomNavItem.route)
                             },
                             icon = {
                                 BadgedBox(
@@ -397,6 +400,7 @@ fun HomeScreen(navController:NavHostController) {
                     Spacer(modifier = Modifier.height(30.dp))
 
                 }
+
             }
         }
     }
@@ -405,7 +409,7 @@ fun HomeScreen(navController:NavHostController) {
 val bottomNavItems = listOf(
     BottomNavItem(
         title = "Home",
-        route="home",
+        route= "home",
         selectedIcon=Icons.Filled.Home,
         unselectedIcon=Icons.Outlined.Home,
         hasNews = false,
@@ -414,7 +418,7 @@ val bottomNavItems = listOf(
 
     BottomNavItem(
         title = "contact",
-        route="support",
+        route= "support",
         selectedIcon=Icons.Filled.Person,
         unselectedIcon=Icons.Outlined.Person,
         hasNews = false,
@@ -423,7 +427,7 @@ val bottomNavItems = listOf(
 
     BottomNavItem(
         title = "about",
-        route="about",
+        route= "about",
         selectedIcon=Icons.Filled.Face,
         unselectedIcon=Icons.Outlined.Face,
         hasNews = false,
